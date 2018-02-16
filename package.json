@@ -1,0 +1,20 @@
+{
+  "name": "isomorphic_react_node",
+  "version": "1.0.0",
+  "description": "Isomorphic React-Node Skeleton.",
+  "private": true,
+  "engines": {
+    "node": ">= 7.6.0"
+  },
+  "scripts": {
+
+  },
+  "author": "Christian Caperton",
+  "license": "MIT",
+  "dependencies": {
+
+  },
+  "devDependencies": {
+
+  }
+}
