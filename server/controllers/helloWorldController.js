@@ -1,4 +1,4 @@
 
 exports.helloWorld = (req, res) => {
-  res.json({"helloWorld": true});
-}
+  res.json({ helloWorld: true });
+};
