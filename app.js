@@ -11,10 +11,6 @@ const errorHandlers = require('./server/handlers/errorHandlers');
 // create our Express app
 const app = express();
 
-// view engine setup
-app.set('views', path.join(__dirname, '/server/views'));
-app.set('view engine', 'pug');
-
 // Takes the raw requests and turns them into usable properties on req.body
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -26,11 +22,7 @@ app.use(cookieParser());
 app.use(passport.initialize());
 app.use(passport.session());
 
-// promisify some callback based APIs
-app.use((req, res, next) => {
-  req.login = promisify(req.login, req);
-  next();
-});
+app.use(express.static(path.resolve(__dirname, 'public')));
 
 // After allllll that above middleware, we finally handle our own routes!
 app.use('/', routes);

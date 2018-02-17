@@ -19,8 +19,7 @@
     "express": "4.16.2",
     "express-session": "1.15.6",
     "moment": "2.20.1",
-    "passport": "0.4.0",
-    "pug": "2.0.0-rc.4"
+    "passport": "0.4.0"
   },
   "devDependencies": {
     "eslint": "4.18.0",

@@ -1,8 +1,6 @@
 // import environmental variables from our variables.env file
 require('dotenv').config({ path: 'variables.env' });
 
-// READY?! Let's go!
-
 // Start our app!
 const app = require('./app');
 
