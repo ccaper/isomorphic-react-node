@@ -5,7 +5,6 @@ exports.helloWorld = (req, res) => {
 };
 
 exports.pathBodyTest = (req, res) => {
-  console.log(req.body);
   const { id } = req.params;
   const { value1, value2 } = req.body;
   const now = moment();
