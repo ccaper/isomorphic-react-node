@@ -20,7 +20,9 @@
     "consistent-return": "off",
     "react/prefer-es6-class": "off",
     "radix": "off",
-    "no-alert": "warn"
+    "no-alert": "warn",
+    "react/prefer-stateless-function": "off",
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
   },
   "plugins": ["react", "jsx-a11y", "import"]
 }
