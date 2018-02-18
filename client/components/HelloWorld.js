@@ -30,7 +30,7 @@ class HelloWorld extends React.Component {
     return (
       <div>
         <h2>Hello World!</h2>
-        <p>data</p>
+        <p className="blah">data</p>
         <ul>
           {Object.keys(this.state.helloWorld)
             .map(key =>
