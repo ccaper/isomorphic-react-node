@@ -1,28 +1,29 @@
 import React from 'react';
 
-function fetchData() {
-  return fetch('api/pathBodyTest/2', {
-    method: 'post',
-    headers: {
-      Accept: 'application/json, text/plain, */*',
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({ value1: 1, value2: 2 })
-  });
-}
-
 class HelloWorld extends React.Component {
   constructor() {
     super();
+    this.fetchData = this.fetchData.bind(this);
     this.state = {
       helloWorld: {}
     };
   }
 
   componentDidMount() {
-    fetchData()
-      .then(res => res.json())
-      .then(data => this.setState({ helloWorld: data }));
+    this.fetchData();
+  }
+
+  async fetchData() {
+    const response = await (await fetch('api/pathBodyTest/2', {
+      method: 'post',
+      headers: {
+        Accept: 'application/json, text/plain, */*',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ value1: 1, value2: 2 })
+    }));
+    const data = await response.json();
+    this.setState({ helloWorld: data });
   }
 
   render() {

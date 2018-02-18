@@ -2,7 +2,7 @@ const webpack = require('webpack');
 
 module.exports = {
   devtool: 'source-map',
-  entry: './client/isomorphic-react-node.js',
+  entry: ['babel-polyfill', './client/isomorphic-react-node.js'],
   output: {
     path: __dirname,
     filename: './public/static/bundle.js'
